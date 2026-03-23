@@ -1,0 +1,6 @@
+node_modules
+sdk
+logs
+.env
+dist
+workspace
