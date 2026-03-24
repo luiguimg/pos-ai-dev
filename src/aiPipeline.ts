@@ -19,7 +19,7 @@ async function run(){
 
   const branch = createBranch(issue.number)
 
-  generateExtension(issue.title)
+  generateExtension(issue)
 
   const valid = validateCode()
 
