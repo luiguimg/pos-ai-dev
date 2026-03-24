@@ -1,0 +1,462 @@
+{
+  "triggers": [
+    {
+      "class": "InitializeStationTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/GasStationHeaderItemSample/InitializeStationTrigger.ts"
+    },
+    {
+      "class": "PostRegisterAuditEventTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/AuditEventSignatureSample/TriggerHandlers/PostRegisterAuditEventTrigger.ts"
+    },
+    {
+      "class": "PreLogOnTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/AuditEventSignatureSample/TriggerHandlers/PreLogOnTrigger.ts"
+    },
+    {
+      "class": "PreRegisterAuditEventTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/AuditEventSignatureSample/TriggerHandlers/PreRegisterAuditEventTrigger.ts"
+    },
+    {
+      "class": "PreEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/B2BSample/TriggerHandlers/PreEndTransactionTrigger.ts"
+    },
+    {
+      "class": "FiscalRegisterPostCartCheckoutTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/TriggerHandlers/FiscalRegisterPostCartCheckoutTrigger.ts"
+    },
+    {
+      "class": "FiscalRegisterPreCloseShiftTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/TriggerHandlers/FiscalRegisterPreCloseShiftTrigger.ts"
+    },
+    {
+      "class": "FiscalRegisterPreEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/TriggerHandlers/FiscalRegisterPreEndTransactionTrigger.ts"
+    },
+    {
+      "class": "FiscalRegisterPrePrintReceiptCopyTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/TriggerHandlers/FiscalRegisterPrePrintReceiptCopyTrigger.ts"
+    },
+    {
+      "class": "FiscalRegisterPreSaleTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/TriggerHandlers/FiscalRegisterPreSaleTrigger.ts"
+    },
+    {
+      "class": "SalesTransBuildNumberPreEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransBuildNumberSample/TriggerHandlers/SalesTransBuildNumberPreEndTransactionTrigger.ts"
+    },
+    {
+      "class": "SalesTransSignaturePostEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransactionSignatureSample/TriggerHandlers/SalesTransSignaPostCartCheckoutTrigger.ts"
+    },
+    {
+      "class": "SalesTransSignaturePreEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransactionSignatureSample/TriggerHandlers/SalesTransSignaPreEndTransactionTrigger.ts"
+    },
+    {
+      "class": "PreLogOnTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransactionSignatureSample/TriggerHandlers/SalesTransSignaturePreLogonTrigger.ts"
+    },
+    {
+      "class": "ApplicationStartTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/ApplicationStartTrigger.ts"
+    },
+    {
+      "class": "ApplicationSuspendTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/ApplicationSuspendTrigger.ts"
+    },
+    {
+      "class": "ChangeUnitOfMeasurePostProductSaleTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/ChangeUnitOfMeasurePostProductSaleTrigger.ts"
+    },
+    {
+      "class": "InfoLoggingPreProductSaleTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/InfoLoggingPreProductSaleTrigger.ts"
+    },
+    {
+      "class": "OverrideTaxPreEndTransactionTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/OverrideTaxPreEndTransactionTrigger.ts"
+    },
+    {
+      "class": "PostCustomerSaveTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostCustomerSaveTrigger.ts"
+    },
+    {
+      "class": "PostFloatEntryTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostFloatEntryTrigger.ts"
+    },
+    {
+      "class": "PostGetGiftCardNumberTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostGetGiftCardNumberTrigger.ts"
+    },
+    {
+      "class": "PostGetLoyaltyCardBalanceTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostGetLoyaltyCardBalanceTrigger.ts"
+    },
+    {
+      "class": "PostGetSerialNumberTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostGetSerialNumberTrigger.ts"
+    },
+    {
+      "class": "PostLogOnTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostLogOnTrigger.ts"
+    },
+    {
+      "class": "PostProductSaleTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostProductSaleTrigger.ts"
+    },
+    {
+      "class": "PostReceiptPromptTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PostReceiptPromptTrigger.ts"
+    },
+    {
+      "class": "PreCreatePackingSlipTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreCreatePackingSlipTrigger.ts"
+    },
+    {
+      "class": "PreCustomerSaveTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreCustomerSaveTrigger.ts"
+    },
+    {
+      "class": "PreDisplayLoyaltyCardBalanceTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreDisplayLoyaltyCardBalanceTrigger.ts"
+    },
+    {
+      "class": "PreFloatEntryTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreFloatEntryTrigger.ts"
+    },
+    {
+      "class": "PreGetLoyaltyCardBalanceTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreGetLoyaltyCardBalanceTrigger.ts"
+    },
+    {
+      "class": "PreMarkFulfillmentLinesAsPackedTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreMarkFulfillmentLinesAsPackedTrigger.ts"
+    },
+    {
+      "class": "PrePrintReceiptCopyTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PrePrintReceiptCopyTrigger.ts"
+    },
+    {
+      "class": "PreProductSaleTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreProductSaleTrigger.ts"
+    },
+    {
+      "class": "PreSearchOrdersTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreSearchOrdersTrigger.ts"
+    },
+    {
+      "class": "PreShipFulfillmentLinesTrigger",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/TriggerHandlers/PreShipFulfillmentLinesTrigger.ts"
+    }
+  ],
+  "managers": [
+    {
+      "class": "AuditEventSigningManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/AuditEventSignatureSample/Managers/AuditEventSigningManager.ts"
+    },
+    {
+      "class": "FiscalIntegrationManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/AuditEventSignatureSample/Managers/FiscalIntegrationManager.ts"
+    },
+    {
+      "class": "FiscalizationManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/Manager/FiscalizationManager.ts"
+    },
+    {
+      "class": "ReceiptsManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/FiscalRegisterSample/Manager/ReceiptsManager.ts"
+    },
+    {
+      "class": "BuildNumberManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransBuildNumberSample/Manager/BuildNumberManager.ts"
+    },
+    {
+      "class": "FiscalIntegrationManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransBuildNumberSample/Manager/FiscalIntegrationManager.ts"
+    },
+    {
+      "class": "FiscalIntegrationManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransactionSignatureSample/Managers/FiscalIntegrationManager.ts"
+    },
+    {
+      "class": "SignatureManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SalesTransactionSignatureSample/Managers/SignatureManager.ts"
+    },
+    {
+      "class": "LastSignatureDataManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SequentialSignature/Managers/LastSignatureDataManager.ts"
+    },
+    {
+      "class": "RegistrationLockManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SequentialSignature/Managers/RegistrationLockManager.ts"
+    },
+    {
+      "class": "SequentialSignatureManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SequentialSignature/Managers/SequentialSignatureManager.ts"
+    },
+    {
+      "class": "SignatureDataValidationManager",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SequentialSignature/Managers/SignatureDataValidationManager.ts"
+    }
+  ],
+  "views": [
+    {
+      "class": "StoreHoursView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/StoreHoursSample/Views/StoreHoursView.ts"
+    },
+    {
+      "class": "StoreHoursViewModel",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/StoreHoursSample/Views/StoreHoursViewModel.ts"
+    },
+    {
+      "class": "SamplesView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/SamplesView.ts"
+    },
+    {
+      "class": "SimpleExtensionView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/SimpleExtensionView.ts"
+    },
+    {
+      "class": "SimpleExtensionViewModel",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/SimpleExtensionViewModel.ts"
+    },
+    {
+      "class": "SimpleNextView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/SimpleNextView.ts"
+    },
+    {
+      "class": "SimpleNextViewModel",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/SimpleNextViewModel.ts"
+    },
+    {
+      "class": "KnockoutExtensionViewControllerBase",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/StoreHoursSample/Views/BaseClasses/KnockoutExtensionViewControllerBase.ts"
+    },
+    {
+      "class": "KnockoutExtensionViewModelBase",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/StoreHoursSample/Views/BaseClasses/KnockoutExtensionViewModelBase.ts"
+    },
+    {
+      "class": "CartViewController",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Cart/CartViewController.ts"
+    },
+    {
+      "class": "PaymentViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Payment/PaymentViewCommand.ts"
+    },
+    {
+      "class": "PickingAndReceivingDetailsViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/PickingAndReceivingDetails/PickingAndReceivingDetailsCmd.ts"
+    },
+    {
+      "class": "NavigateToSimpleExtensionViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Search/NavigateToSimpleExtensionViewCommand.ts"
+    },
+    {
+      "class": "ViewCustomerSummaryCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Search/ViewCustomerSummaryCommand.ts"
+    },
+    {
+      "class": "SearchPickingAndReceivingViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/SearchPickingAndReceiving/SearchPickingAndReceivingCmd.ts"
+    },
+    {
+      "class": "ShippingMethodsViewController",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/ShippingMethods/ShippingMethodsViewController.ts"
+    },
+    {
+      "class": "KnockoutExtensionViewControllerBase",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/BaseClasses/KnockoutExtensionViewControllerBase.ts"
+    },
+    {
+      "class": "KnockoutExtensionViewModelBase",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/BaseClasses/KnockoutExtensionViewModelBase.ts"
+    },
+    {
+      "class": "AddTenderLineToCartView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/AddTenderLineToCartView.ts"
+    },
+    {
+      "class": "AlphanumericInputDialogView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/AlphanumericInputDialogView.ts"
+    },
+    {
+      "class": "AlphanumericNumPadView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/AlphanumericNumPadView.ts"
+    },
+    {
+      "class": "ApiView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/ApiView.ts"
+    },
+    {
+      "class": "AppBarView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/AppBarView.ts"
+    },
+    {
+      "class": "CloseShiftView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/CloseShiftView.ts"
+    },
+    {
+      "class": "CurrencyNumPadView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/CurrencyNumPadView.ts"
+    },
+    {
+      "class": "DataListView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/DataListView.ts"
+    },
+    {
+      "class": "DatePickerView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/DatePickerView.ts"
+    },
+    {
+      "class": "DynamicDataListView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/DynamicDataListView.ts"
+    },
+    {
+      "class": "ForceVoidTransactionView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/ForceVoidTransactionView.ts"
+    },
+    {
+      "class": "HeaderSplitViewView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/HeaderSplitViewView.ts"
+    },
+    {
+      "class": "ListInputDialogView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/ListInputDialogView.ts"
+    },
+    {
+      "class": "LoaderView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/LoaderView.ts"
+    },
+    {
+      "class": "MenuView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/MenuView.ts"
+    },
+    {
+      "class": "NumericInputDialogView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/NumericInputDialogView.ts"
+    },
+    {
+      "class": "NumericNumPadView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/NumericNumPadView.ts"
+    },
+    {
+      "class": "PivotView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/PivotView.ts"
+    },
+    {
+      "class": "PostLogOnView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/PostLogOnView.ts"
+    },
+    {
+      "class": "SyncStockCountJournalsView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/SyncStockCountJournalsView.ts"
+    },
+    {
+      "class": "TextDialogView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/TextInputDialogView.ts"
+    },
+    {
+      "class": "TimePickerView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/TimePickerView.ts"
+    },
+    {
+      "class": "ToggleMenuView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/ToggleMenuView.ts"
+    },
+    {
+      "class": "ToggleSwitchView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/ToggleSwitchView.ts"
+    },
+    {
+      "class": "TransactionNumPadView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/TransactionNumPadView.ts"
+    },
+    {
+      "class": "VoidCartLineView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/VoidCartLineView.ts"
+    },
+    {
+      "class": "VoidTenderLineView",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/Views/Samples/VoidTenderLineView.ts"
+    }
+  ],
+  "commands": [
+    {
+      "class": "GetExternalAddressCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/AddressAddEdit/GetExternalAddressCommand.ts"
+    },
+    {
+      "class": "GetExternalCustomerCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/CustomerAddEdit/GetExternalCustomerCommand.ts"
+    },
+    {
+      "class": "CustomerCrossLoyaltyCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/CustomerDetails/CustomerCrossLoyaltyCommand.ts"
+    },
+    {
+      "class": "DisplayCustomerSummaryCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/CustomerDetails/DisplayCustomerSummaryCommand.ts"
+    },
+    {
+      "class": "FulfillmentLineCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/FulfillmentLine/FulfillmentLineCommand.ts"
+    },
+    {
+      "class": "DownloadDocCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/InventoryLookup/DownloadDocCommand.ts"
+    },
+    {
+      "class": "MoreDetailsMenuCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/InventoryLookupMatrix/MoreDetailsMenuCommand.ts"
+    },
+    {
+      "class": "ManageShiftsCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/ManageShifts/ManageShiftsCommand.ts"
+    },
+    {
+      "class": "PaymentViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Payment/PaymentViewCommand.ts"
+    },
+    {
+      "class": "PickingAndReceivingDetailsViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/PickingAndReceivingDetails/PickingAndReceivingDetailsCmd.ts"
+    },
+    {
+      "class": "ReportDetailsCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/ReportDetails/ReportDetailsCommand.ts"
+    },
+    {
+      "class": "ReturnTransactionCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/ReturnTransaction/ReturnTransactionCommand.ts"
+    },
+    {
+      "class": "NavigateToSimpleExtensionViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Search/NavigateToSimpleExtensionViewCommand.ts"
+    },
+    {
+      "class": "QuickCompareProductsCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Search/QuickCompareProductsCommand.ts"
+    },
+    {
+      "class": "ViewCustomerSummaryCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/Search/ViewCustomerSummaryCommand.ts"
+    },
+    {
+      "class": "SampleSearchOrdersCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/SearchOrders/SampleSearchOrdersCommand.ts"
+    },
+    {
+      "class": "SearchPickingAndReceivingViewCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/SearchPickingAndReceiving/SearchPickingAndReceivingCmd.ts"
+    },
+    {
+      "class": "DownloadDocumentCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/ShowJournal/DownloadDocumentCommand.ts"
+    },
+    {
+      "class": "StockCountDetailsCommand",
+      "file": "/root/ai-pos-dev/sdk/POS/Extensions/SampleExtensions/ViewExtensions/StockCountDetails/StockCountDetailsCommand.ts"
+    }
+  ]
+}

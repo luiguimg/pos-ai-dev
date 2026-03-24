@@ -1,0 +1,226 @@
+[
+  {
+    "name": "ODataRequest",
+    "methods": []
+  },
+  {
+    "name": "ODataMetadata",
+    "methods": []
+  },
+  {
+    "name": "OData",
+    "methods": [
+      "read",
+      "request"
+    ]
+  },
+  {
+    "name": "DataJSCacheOptions",
+    "methods": []
+  },
+  {
+    "name": "DataJSCache",
+    "methods": [
+      "readRange",
+      "count",
+      "clear"
+    ]
+  },
+  {
+    "name": "DataJSStore",
+    "methods": [
+      "add",
+      "addOrUpdate",
+      "contains",
+      "getAllKeys",
+      "read",
+      "remove",
+      "clear",
+      "close"
+    ]
+  },
+  {
+    "name": "DataJSDeferredResult",
+    "methods": [
+      "then",
+      "abort"
+    ]
+  },
+  {
+    "name": "DataJS",
+    "methods": [
+      "createDataCache",
+      "createStore"
+    ]
+  },
+  {
+    "name": "IDisposable",
+    "methods": []
+  },
+  {
+    "name": "Computed",
+    "methods": []
+  },
+  {
+    "name": "Observable",
+    "methods": [
+      "extend"
+    ]
+  },
+  {
+    "name": "ObservableArray",
+    "methods": [
+      "splice"
+    ]
+  },
+  {
+    "name": "ObservableExtender",
+    "methods": []
+  },
+  {
+    "name": "KnockoutUtils",
+    "methods": []
+  },
+  {
+    "name": "Knockout",
+    "methods": [
+      "observable",
+      "observableArray",
+      "computed",
+      "dataFor"
+    ]
+  },
+  {
+    "name": "KnockoutBindingContext",
+    "methods": [
+      "extend",
+      "createChildContext"
+    ]
+  },
+  {
+    "name": "KnockoutBindingHandler",
+    "methods": [
+      "init",
+      "update"
+    ]
+  },
+  {
+    "name": "IGasPumpStatus",
+    "methods": []
+  },
+  {
+    "name": "IGasPump",
+    "methods": []
+  },
+  {
+    "name": "IFiscalRegister",
+    "methods": [
+      "isReady",
+      "registerFiscalTransaction"
+    ]
+  },
+  {
+    "name": "IErrorWithErrorCode",
+    "methods": []
+  },
+  {
+    "name": "ICancelableRepeatCheck",
+    "methods": []
+  },
+  {
+    "name": "IRegisterableSequentialEvent",
+    "methods": [
+      "getSignatureRecoveryStrategy",
+      "getFiscalRegistrationSequenceType",
+      "updateWithLastSignatureAsync",
+      "getLockId"
+    ]
+  },
+  {
+    "name": "ISequentialSignatureRegisterableData",
+    "methods": []
+  },
+  {
+    "name": "ISignatureRecoveryStrategy",
+    "methods": [
+      "getDefaultSequentialSignature",
+      "recoverLastSignatureAsync"
+    ]
+  },
+  {
+    "name": "IStoreHours",
+    "methods": []
+  },
+  {
+    "name": "IAvailableHour",
+    "methods": []
+  },
+  {
+    "name": "IStoreHoursExtensionViewModelOptions",
+    "methods": []
+  },
+  {
+    "name": "ISimpleNextViewModelOptions",
+    "methods": []
+  },
+  {
+    "name": "ISimpleExtensionViewModelOptions",
+    "methods": []
+  },
+  {
+    "name": "IPostLogOnViewOptions",
+    "methods": []
+  },
+  {
+    "name": "ISampleItem",
+    "methods": []
+  },
+  {
+    "name": "IEventRequest",
+    "methods": []
+  },
+  {
+    "name": "IStoreHoursDialogResult",
+    "methods": []
+  },
+  {
+    "name": "IFiscalRegistrationRequest",
+    "methods": []
+  },
+  {
+    "name": "IFiscalTransactionInfo",
+    "methods": []
+  },
+  {
+    "name": "IFiscalTaxInfo",
+    "methods": []
+  },
+  {
+    "name": "IFiscalRegistrationResults",
+    "methods": []
+  },
+  {
+    "name": "IBarcodeMsrDialogResult",
+    "methods": []
+  },
+  {
+    "name": "ISampleDialogResult",
+    "methods": []
+  },
+  {
+    "name": "IGiftCardBalanceDialogResult",
+    "methods": []
+  },
+  {
+    "name": "IMonthlyPrice",
+    "methods": []
+  },
+  {
+    "name": "IShiftData",
+    "methods": []
+  },
+  {
+    "name": "IShiftData",
+    "methods": []
+  }
+]

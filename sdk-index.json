@@ -1,0 +1,99 @@
+{
+  "classes": [
+    {
+      "name": "GetGiftCardByIdServiceRequest",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetGiftCardByIdServiceResponse",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetPaymentCardTypeByBinRangeClientRequest",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetPaymentCardTypeByBinRangeClientResponse",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetSignatureClientRequest",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetSignatureClientResponse",
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ODataRequest",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "ODataMetadata",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "OData",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSCacheOptions",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSCache",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSStore",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSDeferredResult",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJS",
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "IDisposable",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Computed",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Observable",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "ObservableArray",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "ObservableExtender",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutUtils",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Knockout",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutBindingContext",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutBindingHandler",
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    }
+  ],
+  "enums": []
+}

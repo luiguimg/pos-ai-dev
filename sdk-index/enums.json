@@ -1,0 +1,92 @@
+[
+  {
+    "name": "GasPumpState",
+    "members": [
+      "Unknown",
+      "Idle",
+      "Pumping",
+      "Disabled",
+      "Emergency"
+    ]
+  },
+  {
+    "name": "ConfirmSkipRefiscalizationDialogResult",
+    "members": [
+      "OkResult",
+      "CancelResult"
+    ]
+  },
+  {
+    "name": "RunRefiscalizationDialogResult",
+    "members": [
+      "OkResult",
+      "CancelResult"
+    ]
+  },
+  {
+    "name": "SkipRefiscalizeDialogResult",
+    "members": [
+      "SkipResult",
+      "CancelResult"
+    ]
+  },
+  {
+    "name": "FiscalRegistrationSequenceType",
+    "members": [
+      "None",
+      "Sales",
+      "ReceiptCopy",
+      "ShiftClose",
+      "TechnicalEvent"
+    ]
+  },
+  {
+    "name": "WeekDays",
+    "members": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  },
+  {
+    "name": "Hours",
+    "members": [
+      "zero",
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine",
+      "ten",
+      "eleven",
+      "twelve",
+      "thirteen",
+      "fourteen",
+      "fifteen",
+      "sixteen",
+      "seventeen",
+      "eightteen",
+      "nineteen",
+      "twenty",
+      "twentyOne",
+      "twentyTwo",
+      "twentyThree",
+      "twentyFour"
+    ]
+  },
+  {
+    "name": "FiscalRegisterTransactionType",
+    "members": [
+      "Original",
+      "Copy"
+    ]
+  }
+]
