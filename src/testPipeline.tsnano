@@ -1,0 +1,26 @@
+import {generateTrigger} from "./generateTestExtension"
+import {execSync} from "child_process"
+
+async function run(){
+
+ console.log("Generating extension...")
+
+ generateTrigger()
+
+ console.log("Validating with TypeScript...")
+
+ try{
+
+  execSync("npx tsc generated-extensions/**/*.ts --noEmit",{stdio:"inherit"})
+
+  console.log("SUCCESS: Code compiles")
+
+ }catch{
+
+  console.log("ERROR: Code does not compile")
+
+ }
+
+}
+
+run()

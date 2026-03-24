@@ -1,0 +1,2335 @@
+[
+  {
+    "name": "GetGiftCardByIdServiceRequest",
+    "methods": [],
+    "properties": [
+      "giftCardId"
+    ],
+    "extends": "ServiceRequest"
+  },
+  {
+    "name": "GetGiftCardByIdServiceResponse",
+    "methods": [],
+    "properties": [
+      "giftCard"
+    ],
+    "extends": "ServiceResponse"
+  },
+  {
+    "name": "GetPaymentCardTypeByBinRangeClientRequest",
+    "methods": [],
+    "properties": [
+      "paymentCardNumber",
+      "isSwipe",
+      "cardInfo",
+      "extensionTransactionProperties",
+      "paymentInfo"
+    ],
+    "extends": "Request"
+  },
+  {
+    "name": "GetPaymentCardTypeByBinRangeClientResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "ClientResponse"
+  },
+  {
+    "name": "GetSignatureClientRequest",
+    "methods": [],
+    "properties": [],
+    "extends": "ClientRequest"
+  },
+  {
+    "name": "GetSignatureClientResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "ClientResponse"
+  },
+  {
+    "name": "GasPumpStatusDialog",
+    "methods": [
+      "onReady",
+      "open",
+      "onCloseX",
+      "_enablePumpClickHandler",
+      "_disablePumpClickHandler",
+      "resolvePromise"
+    ],
+    "properties": [
+      "DATA_LIST_ELEMENT_ID",
+      "ENABLE_PUMP_BUTTON_ID",
+      "DISABLE_PUMP_BUTTON_ID",
+      "_dataList",
+      "_selectedPump",
+      "_resolve"
+    ],
+    "extends": "ExtensionTemplatedDialogBase"
+  },
+  {
+    "name": "GasPumpStatusPackingItem",
+    "methods": [
+      "onReady",
+      "init",
+      "dispose",
+      "onItemClickedHandler",
+      "_reevaluatePumpStatuses",
+      "_getGeneralPumpsStatus"
+    ],
+    "properties": [
+      "position",
+      "backgroundColor",
+      "label",
+      "OK_STATUS_COLOR",
+      "WARNING_STATUS_COLOR",
+      "EMERGENCY_STATUS_COLOR",
+      "OK_STATUS_LABEL",
+      "WARNING_STATUS_LABEL",
+      "EMERGENCY_STATUS_LABEL",
+      "_overallStatus",
+      "_pumps",
+      "_pumpStatusChangedHandlerProxied"
+    ],
+    "extends": "CustomPackingItem"
+  },
+  {
+    "name": "GasStationDataStore",
+    "methods": [
+      "initAsync",
+      "updatePumpStatus",
+      "addPumpStatusChangedHandler",
+      "_savePumpsState",
+      "_simulateEmergency"
+    ],
+    "properties": [
+      "_instance",
+      "GAS_PUMPS_LOCAL_STORAGE_KEY",
+      "INITIAL_GAS_PUMP_DETAILS",
+      "_pumps",
+      "_pumpStatusChangedHandlers"
+    ]
+  },
+  {
+    "name": "InitializeStationTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "ApplicationStartTrigger"
+  },
+  {
+    "name": "ErrorHelper",
+    "methods": [
+      "displayErrorAsync"
+    ],
+    "properties": []
+  },
+  {
+    "name": "RegisterableSequentialAuditEvent",
+    "methods": [
+      "getSignatureRecoveryStrategy",
+      "getFiscalRegistrationSequenceType",
+      "updateWithLastSignatureAsync",
+      "getLockId"
+    ],
+    "properties": [
+      "LAST_SIGNATURE_KEY_ID",
+      "LAST_SEQUENTIAL_NUMBER_KEY_ID",
+      "_extensionContext",
+      "_signatureStrategy",
+      "_auditEvent"
+    ]
+  },
+  {
+    "name": "AuditEventSigningManager",
+    "methods": [
+      "onLogonRecovery",
+      "preSignature",
+      "postSignature",
+      "_getSignatureStrategy",
+      "_createEventId"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "FiscalIntegrationManager",
+    "methods": [
+      "isFiscalIntegrationEnabledAsync"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "PostRegisterAuditEventTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostRegisterAuditEventTrigger"
+  },
+  {
+    "name": "PreLogOnTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreLogOnTrigger"
+  },
+  {
+    "name": "PreRegisterAuditEventTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreRegisterAuditEventTrigger"
+  },
+  {
+    "name": "PreEndTransactionTrigger",
+    "methods": [
+      "execute",
+      "isCustomerB2B"
+    ],
+    "properties": [
+      "B2B_CUSTOMER_ATTRIBUTE_NAME",
+      "B2B_CART_ATTRIBUTE_NAME",
+      "B2B_ATTRIBUTE_VALUE_TRUE",
+      "B2B_ATTRIBUTE_VALUE_FALSE",
+      "DIALOG_RESULT_YES",
+      "DIALOG_RESULT_NO",
+      "DIALOG_YES_BUTTON_ID",
+      "DIALOG_NO_BUTTON_ID"
+    ],
+    "extends": "PreEndTransactionTrigger"
+  },
+  {
+    "name": "DualDisplayCustomControl",
+    "methods": [
+      "onReady",
+      "init"
+    ],
+    "properties": [
+      "cartLinesDataList",
+      "cartTotalAmount",
+      "customerName",
+      "customerAccountNumber",
+      "isLoggedOn",
+      "employeeName",
+      "cartTotalAmountLabel",
+      "customerNameLabel",
+      "customerAccountNumberLabel",
+      "employeeNameLabel",
+      "TEMPLATE_ID",
+      "_cart",
+      "_cartLinesObservable",
+      "_customer",
+      "_loggedOn",
+      "_employee"
+    ],
+    "extends": "DualDisplayCustomControlBase"
+  },
+  {
+    "name": "ConfirmSkipRefiscalizationDialog",
+    "methods": [
+      "show"
+    ],
+    "properties": [
+      "OK_RESULT",
+      "CANCEL_RESULT",
+      "TITLE_ID",
+      "MESSAGE_ID",
+      "OK_BUTTON_LABEL_ID",
+      "CANCEL_BUTTON_LABEL_ID"
+    ]
+  },
+  {
+    "name": "RunRefiscalizationDialog",
+    "methods": [
+      "show"
+    ],
+    "properties": [
+      "OK_RESULT",
+      "CANCEL_RESULT",
+      "TITLE_ID",
+      "MESSAGE_ID",
+      "OK_BUTTON_LABEL_ID",
+      "CANCEL_BUTTON_LABEL_ID"
+    ]
+  },
+  {
+    "name": "SkipRefiscalizeDialog",
+    "methods": [
+      "show"
+    ],
+    "properties": [
+      "SKIP_RESULT",
+      "CANCEL_RESULT",
+      "TITLE_ID",
+      "MESSAGE_ID",
+      "SKIP_BUTTON_LABEL_ID",
+      "CANCEL_BUTTON_LABEL_ID"
+    ]
+  },
+  {
+    "name": "FiscalizationManager",
+    "methods": [
+      "checkReadyForFiscalization",
+      "fiscalize",
+      "checkCompletedTransactionsRegistered",
+      "fiscalRegisterIsEnabled",
+      "checkCompletedTransactionsRegisteredLoop",
+      "checkRefiscalizationRequired",
+      "getSalesOrdersWithNoFiscalTransactions",
+      "startRefiscalization",
+      "onFiscalizeError",
+      "skipFiscalize",
+      "manualFiscalization",
+      "packFiscalTransaction",
+      "saveFiscalTransaction"
+    ],
+    "properties": [
+      "FISCAL_REGISTER_NOT_ENABLED_ERROR_RESOURCE_ID",
+      "FISCAL_REGISTER_NOT_AVAILABLE_ERROR_RESOURCE_ID",
+      "extensionContext"
+    ]
+  },
+  {
+    "name": "ReceiptsManager",
+    "methods": [
+      "updateAndPrintReceipts",
+      "registerPrintReceiptCopyEvent",
+      "recreateSalesReceiptsForSalesOrder"
+    ],
+    "properties": [
+      "PRINT_RECEIPT_COPY_SOURCE",
+      "extensionContext"
+    ]
+  },
+  {
+    "name": "SkipFiscalizationOperationRequest",
+    "methods": [],
+    "properties": [
+      "OPERATION_ID"
+    ],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "SkipFiscalizationOperationRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "SkipFiscalizationOperationResponse",
+    "methods": [],
+    "properties": [
+      "staffId"
+    ],
+    "extends": "Response"
+  },
+  {
+    "name": "FiscalRegisterPostCartCheckoutTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostCartCheckoutTrigger"
+  },
+  {
+    "name": "FiscalRegisterPreCloseShiftTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreOperationTrigger"
+  },
+  {
+    "name": "FiscalRegisterPreEndTransactionTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreEndTransactionTrigger"
+  },
+  {
+    "name": "FiscalRegisterPrePrintReceiptCopyTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PrePrintReceiptCopyTrigger"
+  },
+  {
+    "name": "FiscalRegisterPreSaleTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreProductSaleTrigger"
+  },
+  {
+    "name": "ErrorHelper",
+    "methods": [],
+    "properties": [
+      "errorResourceIdEnum"
+    ]
+  },
+  {
+    "name": "GetGiftReceiptsClientRequestHandlerExt",
+    "methods": [
+      "executeAsync",
+      "_getGiftReceiptForAllSalesLinesAsync"
+    ],
+    "properties": [],
+    "extends": "GetGiftReceiptsClientRequestHandler"
+  },
+  {
+    "name": "BuildNumberManager",
+    "methods": [
+      "addBuildNumberToCart"
+    ],
+    "properties": [
+      "BUILD_NUMBER_KEY_ID",
+      "extensionContext"
+    ]
+  },
+  {
+    "name": "FiscalIntegrationManager",
+    "methods": [
+      "isFiscalIntegrationEnabledAsync"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "SalesTransBuildNumberPreEndTransactionTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreEndTransactionTrigger"
+  },
+  {
+    "name": "GetSignatureRecoveryStrategyRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionRequestHandlerBase"
+  },
+  {
+    "name": "SignatureRecoveryStrategyNorway",
+    "methods": [
+      "getDefaultSequentialSignature",
+      "recoverLastSignatureAsync"
+    ],
+    "properties": [
+      "DEFAULT_SEQUENTIAL_SIGNATURE"
+    ]
+  },
+  {
+    "name": "RegisterableSequentialSalesEvent",
+    "methods": [
+      "getSignatureRecoveryStrategy",
+      "getFiscalRegistrationSequenceType",
+      "updateWithLastSignatureAsync",
+      "getLockId"
+    ],
+    "properties": [
+      "LAST_SIGNATURE_KEY_ID",
+      "LAST_SEQUENTIAL_NUMBER_KEY_ID",
+      "_extensionContext",
+      "_signatureRecoveryStrategy",
+      "_lockId"
+    ]
+  },
+  {
+    "name": "FiscalIntegrationManager",
+    "methods": [
+      "isFiscalIntegrationEnabledAsync"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "SignatureManager",
+    "methods": [
+      "onLogonRecovery",
+      "preSignature",
+      "postSignature",
+      "_getSignatureRecoveryStrategy"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "SalesTransSignaturePostEndTransactionTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostCartCheckoutTrigger"
+  },
+  {
+    "name": "SalesTransSignaturePreEndTransactionTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreEndTransactionTrigger"
+  },
+  {
+    "name": "PreLogOnTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreLogOnTrigger"
+  },
+  {
+    "name": "PostSignatureRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionRequestHandlerBase"
+  },
+  {
+    "name": "PreSignatureRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionRequestHandlerBase"
+  },
+  {
+    "name": "RecoverSignatureOnLogonRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionRequestHandlerBase"
+  },
+  {
+    "name": "LastSignatureDataManager",
+    "methods": [
+      "getLastSequentialSignature",
+      "setLastSequentialSignature",
+      "resolveKey"
+    ],
+    "properties": [
+      "LAST_SALES_TRANSACTION_SEQUENTIAL_SIGNATURE_KEY",
+      "LAST_TECHNICAL_EVENT_SEQUENTIAL_SIGNATURE_KEY",
+      "LAST_RECEIPT_PRINT_COPY_SEQUENTIAL_SIGNATURE_KEY"
+    ]
+  },
+  {
+    "name": "RegistrationLockManager",
+    "methods": [
+      "getRegistrationLock",
+      "setRegistrationLock",
+      "releaseRegistrationLock",
+      "resolveKey"
+    ],
+    "properties": [
+      "SUBMITTING_SALES_ID_KEY",
+      "SUBMITTING_TECHNICAL_EVENT_ID_KEY",
+      "SUBMITTING_RECEIPT_COPY_ID_KEY"
+    ]
+  },
+  {
+    "name": "SequentialSignatureManager",
+    "methods": [
+      "onLogonRecovery",
+      "preSignature",
+      "postSignature",
+      "_storeLastSignatureFromResponse",
+      "_releaseLock",
+      "_checkSignatureServiceIsReady",
+      "_checkRegistrationLockedAsync",
+      "_lastSignatureFullRecovery",
+      "_isDatabaseOnlineAndSynced",
+      "_checkOfflineDataBaseIsSynced"
+    ],
+    "properties": [
+      "SIGNATURE_SERVICE_ERROR_RESOURCE_ID",
+      "FISCAL_TRANSACTION_PARSING_FAILED_RESOURCE_ID",
+      "SIGNATURE_RECOVERY_ERROR_RESOURCE_ID",
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "SignatureDataValidationManager",
+    "methods": [
+      "isValidSequentialSignatureDataObject"
+    ],
+    "properties": []
+  },
+  {
+    "name": "PostSignatureRequest",
+    "methods": [],
+    "properties": [
+      "isSigned",
+      "registerResponse",
+      "sequenceType"
+    ],
+    "extends": "ExtensionRequestBase"
+  },
+  {
+    "name": "PostSignatureResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "PreSignatureRequest",
+    "methods": [],
+    "properties": [
+      "registerableEvent"
+    ],
+    "extends": "ExtensionRequestBase"
+  },
+  {
+    "name": "PreSignatureResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "RecoverSignatureOnLogonRequest",
+    "methods": [],
+    "properties": [
+      "sequenceType",
+      "signatureRecoveryStrategy"
+    ],
+    "extends": "ExtensionRequestBase"
+  },
+  {
+    "name": "RecoverSignatureOnLogonResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "GetSignatureRecoveryStrategyRequest",
+    "methods": [],
+    "properties": [],
+    "extends": "ExtensionRequestBase"
+  },
+  {
+    "name": "GetSignatureRecoveryStrategyResponse",
+    "methods": [],
+    "properties": [
+      "signatureRecoveryStrategy"
+    ],
+    "extends": "Response"
+  },
+  {
+    "name": "SignatureRecoveryStrategyDefault",
+    "methods": [
+      "getDefaultSequentialSignature",
+      "recoverLastSignatureAsync"
+    ],
+    "properties": [
+      "DEFAULT_SEQUENTIAL_SIGNATURE"
+    ]
+  },
+  {
+    "name": "StoreHourConverter",
+    "methods": [
+      "getWeekdayName",
+      "formatStoreHour",
+      "convertToClientStoreHours",
+      "convertToServerStoreHours"
+    ],
+    "properties": []
+  },
+  {
+    "name": "StoreHoursView",
+    "methods": [
+      "onReady",
+      "dispose"
+    ],
+    "properties": [
+      "viewModel",
+      "dataList"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "StoreHoursViewModel",
+    "methods": [
+      "loadAsync",
+      "listItemSelected"
+    ],
+    "properties": [
+      "title",
+      "currentStoreHours",
+      "_context",
+      "_customViewControllerBaseState"
+    ],
+    "extends": "KnockoutExtensionViewModelBase"
+  },
+  {
+    "name": "GiftCardNumberDialog",
+    "methods": [
+      "show",
+      "_onBeforeClose",
+      "_getGiftCardByIdAsync"
+    ],
+    "properties": []
+  },
+  {
+    "name": "CashDrawerOpenRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "CashDrawerOpenRequestHandler"
+  },
+  {
+    "name": "DepositOverrideOperationRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "DepositOverrideOperationRequestHandler"
+  },
+  {
+    "name": "GetCancellationChargeClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetCancellationChargeClientRequestHandler"
+  },
+  {
+    "name": "GetCountedTenderDetailAmountClientRequestHandlerExt",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetCountedTenderDetailAmountClientRequestHandler"
+  },
+  {
+    "name": "GetKeyedInPriceClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetKeyedInPriceClientRequestHandler"
+  },
+  {
+    "name": "GetPickupDateClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetPickupDateClientRequestHandler"
+  },
+  {
+    "name": "GetReceiptEmailAddressClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetReceiptEmailAddressClientRequestHandler"
+  },
+  {
+    "name": "GetRefinerValuesByTextServiceRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetRefinerValuesByTextServiceRequestHandler"
+  },
+  {
+    "name": "GetReportParametersClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetReportParametersClientRequestHandler"
+  },
+  {
+    "name": "GetScanResultClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetScanResultClientRequestHandler"
+  },
+  {
+    "name": "GetSerialNumberClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetSerialNumberClientRequestHandler"
+  },
+  {
+    "name": "GetShippingChargeClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetShippingChargeClientRequestHandler"
+  },
+  {
+    "name": "GetShippingDateClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetShippingDateClientRequestHandler"
+  },
+  {
+    "name": "GetTenderDetailsClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "GetTenderDetailsClientRequestHandler"
+  },
+  {
+    "name": "LoyaltyCardPointsBalanceOperationRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "LoyaltyCardPointsBalanceOperationRequestHandler"
+  },
+  {
+    "name": "PrintPackingSlipClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "PrintPackingSlipClientRequestHandler"
+  },
+  {
+    "name": "SelectZipCodeInfoClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "SelectZipCodeInfoClientRequestHandler"
+  },
+  {
+    "name": "ShowChangeDueClientRequestHandlerExt",
+    "methods": [
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ShowChangeDueClientRequestHandler"
+  },
+  {
+    "name": "CartAmountDuePackingItem",
+    "methods": [
+      "onReady",
+      "init",
+      "dispose",
+      "onItemClickedHandler",
+      "_cartChangedHandler"
+    ],
+    "properties": [
+      "position",
+      "amountDueLabel",
+      "_currentAmountDue",
+      "_amountDueSubscription"
+    ],
+    "extends": "CustomPackingItem"
+  },
+  {
+    "name": "SendEmailRequest",
+    "methods": [],
+    "properties": [
+      "emailAddress",
+      "message"
+    ],
+    "extends": "ExtensionRequestBase"
+  },
+  {
+    "name": "SendEmailRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionRequestHandlerBase"
+  },
+  {
+    "name": "SendEmailResponse",
+    "methods": [],
+    "properties": [
+      "dateSent"
+    ],
+    "extends": "Response"
+  },
+  {
+    "name": "ApplicationStartTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "ApplicationStartTrigger"
+  },
+  {
+    "name": "ApplicationSuspendTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "ApplicationSuspendTrigger"
+  },
+  {
+    "name": "ChangeUnitOfMeasurePostProductSaleTrigger",
+    "methods": [
+      "execute",
+      "doChangeUnitOfMeasure"
+    ],
+    "properties": [],
+    "extends": "PostProductSaleTrigger"
+  },
+  {
+    "name": "InfoLoggingPreProductSaleTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreProductSaleTrigger"
+  },
+  {
+    "name": "OverrideTaxPreEndTransactionTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreEndTransactionTrigger"
+  },
+  {
+    "name": "PostCustomerSaveTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostCustomerSaveTrigger"
+  },
+  {
+    "name": "PostFloatEntryTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostFloatEntryTrigger"
+  },
+  {
+    "name": "PostGetGiftCardNumberTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostGetGiftCardNumberTrigger"
+  },
+  {
+    "name": "PostGetLoyaltyCardBalanceTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostGetLoyaltyCardBalanceTrigger"
+  },
+  {
+    "name": "PostGetSerialNumberTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostGetSerialNumberTrigger"
+  },
+  {
+    "name": "PostLogOnTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostLogOnTrigger"
+  },
+  {
+    "name": "PostProductSaleTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostProductSaleTrigger"
+  },
+  {
+    "name": "PostReceiptPromptTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PostReceiptPromptTrigger"
+  },
+  {
+    "name": "PreCreatePackingSlipTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreCreatePackingSlipTrigger"
+  },
+  {
+    "name": "PreCustomerSaveTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreCustomerSaveTrigger"
+  },
+  {
+    "name": "PreDisplayLoyaltyCardBalanceTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreDisplayLoyaltyCardBalanceTrigger"
+  },
+  {
+    "name": "PreFloatEntryTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreFloatEntryTrigger"
+  },
+  {
+    "name": "PreGetLoyaltyCardBalanceTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreGetLoyaltyCardBalanceTrigger"
+  },
+  {
+    "name": "PreMarkFulfillmentLinesAsPackedTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreMarkFulfillmentLinesAsPackedTrigger"
+  },
+  {
+    "name": "PrePrintReceiptCopyTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PrePrintReceiptCopyTrigger"
+  },
+  {
+    "name": "PreProductSaleTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreProductSaleTrigger"
+  },
+  {
+    "name": "PreSearchOrdersTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreSearchOrdersTrigger"
+  },
+  {
+    "name": "PreShipFulfillmentLinesTrigger",
+    "methods": [
+      "execute"
+    ],
+    "properties": [],
+    "extends": "PreShipFulfillmentLinesTrigger"
+  },
+  {
+    "name": "SamplesView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "sampleClick"
+    ],
+    "properties": [
+      "samplesList"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "SimpleExtensionView",
+    "methods": [
+      "onReady",
+      "showToggleMenuStatic",
+      "showMenuStatic",
+      "dispose",
+      "onBarcodeScanned",
+      "onMagneticStripeRead",
+      "_menuCommandClick",
+      "_menuCommandClick2"
+    ],
+    "properties": [
+      "viewModel",
+      "datePicker",
+      "timePicker",
+      "toggleSwitch",
+      "menuStatic",
+      "toggleMenuStatic",
+      "implementsIBarcodeScannerEndpoint",
+      "implementsIMagneticStripeReaderEndpoint"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "SimpleExtensionViewModel",
+    "methods": [
+      "updateMessage",
+      "openTemplatedDialog",
+      "openBarcodeMsrDialog",
+      "openMessageDialog",
+      "navigateNext",
+      "toggleChanged"
+    ],
+    "properties": [
+      "simpleMessage",
+      "allowNavigateNext",
+      "title",
+      "dialogResult",
+      "date",
+      "time",
+      "permitDateAndTimeChanges",
+      "preventDateAndTimeChanges",
+      "_context"
+    ],
+    "extends": "KnockoutExtensionViewModelBase"
+  },
+  {
+    "name": "SimpleNextView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "onBarcodeScanned",
+      "onMagneticStripeRead"
+    ],
+    "properties": [
+      "viewModel",
+      "dataList",
+      "pivot",
+      "simplePivotItem",
+      "workerRequestPivotItem",
+      "implementsIBarcodeScannerEndpoint",
+      "implementsIMagneticStripeReaderEndpoint"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "SimpleNextViewModel",
+    "methods": [
+      "load",
+      "updateMessage",
+      "tabChanged",
+      "listItemInvoked",
+      "selectionChanged",
+      "navigateToSimplePage"
+    ],
+    "properties": [
+      "simpleMessage",
+      "_context",
+      "_customViewControllerBaseState"
+    ],
+    "extends": "KnockoutExtensionViewModelBase"
+  },
+  {
+    "name": "DialogSampleModule",
+    "methods": [
+      "onReady",
+      "open",
+      "btnUpdateClickHandler",
+      "btnCancelClickHandler",
+      "resolvePromise"
+    ],
+    "properties": [
+      "messagePassedToDialog",
+      "availableHours",
+      "selectedOpenHour",
+      "selectedCloseHour",
+      "_resolve",
+      "_originalStoreHour"
+    ],
+    "extends": "ExtensionTemplatedDialogBase"
+  },
+  {
+    "name": "StoreHoursOperationRequest",
+    "methods": [],
+    "properties": [],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "StoreHoursOperationRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "StoreHoursOperationResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "FiscalRegister",
+    "methods": [
+      "getFiscalRegistrationRequest",
+      "isReady",
+      "registerFiscalTransaction"
+    ],
+    "properties": [
+      "FISCAL_REGISTER_DEVICE_NAME",
+      "FISCAL_REGISTER_IS_READY_REQUEST_NAME",
+      "FISCAL_REGISTER_REGISTER_FISCAL_TRANSACTION_REQUEST_NAME",
+      "extensionContextRuntime"
+    ]
+  },
+  {
+    "name": "KnockoutExtensionViewControllerBase",
+    "methods": [
+      "onReady"
+    ],
+    "properties": [
+      "viewModel"
+    ],
+    "extends": "ExtensionViewControllerBase"
+  },
+  {
+    "name": "KnockoutExtensionViewModelBase",
+    "methods": [
+      "dispose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "BarcodeMsrDialog",
+    "methods": [
+      "onReady",
+      "open",
+      "_cancelButtonClickHandler",
+      "_resolvePromise",
+      "_onNumPadEnter"
+    ],
+    "properties": [
+      "numPad",
+      "resolve",
+      "_inputType",
+      "_automatedEntryInProgress"
+    ],
+    "extends": "ExtensionTemplatedDialogBase"
+  },
+  {
+    "name": "CustomControl",
+    "methods": [],
+    "properties": [],
+    "extends": "ExtensionControlBase"
+  },
+  {
+    "name": "CustomKnockoutControl",
+    "methods": [
+      "init"
+    ],
+    "properties": [
+      "_extensionContext"
+    ]
+  },
+  {
+    "name": "AlphanumericInputDialog",
+    "methods": [
+      "show",
+      "onBeforeClose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "DialogSampleModule",
+    "methods": [
+      "onReady",
+      "open",
+      "closeDialogClicked",
+      "enableOkClicked",
+      "onCloseX",
+      "button1ClickHandler",
+      "button2ClickHandler",
+      "resolvePromise"
+    ],
+    "properties": [
+      "messagePassedToDialog",
+      "userEnteredValue",
+      "resolve"
+    ],
+    "extends": "ExtensionTemplatedDialogBase"
+  },
+  {
+    "name": "ListInputDialog",
+    "methods": [
+      "show",
+      "onBeforeClose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "ListData",
+    "methods": [],
+    "properties": [
+      "label",
+      "value"
+    ]
+  },
+  {
+    "name": "MessageDialog",
+    "methods": [
+      "show"
+    ],
+    "properties": []
+  },
+  {
+    "name": "NumericInputDialog",
+    "methods": [
+      "show",
+      "onBeforeClose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "TextInputDialog",
+    "methods": [
+      "show",
+      "onBeforeClose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "GiftCardBalanceDialog",
+    "methods": [
+      "onReady",
+      "open"
+    ],
+    "properties": [
+      "balance",
+      "expirationDate",
+      "number"
+    ],
+    "extends": "ExtensionTemplatedDialogBase"
+  },
+  {
+    "name": "CheckGiftCardBalanceHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "CheckGiftCardBalanceRequest",
+    "methods": [],
+    "properties": [],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "CheckGiftCardBalanceResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "EndOfDayOperationRequest",
+    "methods": [],
+    "properties": [],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "EndOfDayOperationRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "EndOfDayOperationResponse",
+    "methods": [],
+    "properties": [],
+    "extends": "Response"
+  },
+  {
+    "name": "PrintOperationRequest",
+    "methods": [],
+    "properties": [
+      "messageToPrint"
+    ],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "PrintOperationRequestHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "PrintOperationResponse",
+    "methods": [],
+    "properties": [
+      "printedMessage"
+    ],
+    "extends": "Response"
+  },
+  {
+    "name": "SaveDataToSelectedCartLineHandler",
+    "methods": [
+      "supportedRequestType",
+      "executeAsync",
+      "_saveDataToCartLineByCartLineId",
+      "_showDialog"
+    ],
+    "properties": [],
+    "extends": "ExtensionOperationRequestHandlerBase"
+  },
+  {
+    "name": "SaveDataToSelectedCartLineRequest",
+    "methods": [],
+    "properties": [
+      "installationDate"
+    ],
+    "extends": "ExtensionOperationRequestBase"
+  },
+  {
+    "name": "SaveDataToSelectedCartLineResponse",
+    "methods": [],
+    "properties": [
+      "cart"
+    ],
+    "extends": "Response"
+  },
+  {
+    "name": "AddressAddEditCustomFieldsSection",
+    "methods": [
+      "onReady",
+      "init",
+      "toggleSwitchChanged",
+      "_addOrUpdateExtensionProperty"
+    ],
+    "properties": [
+      "notes",
+      "toggleSwitch",
+      "TEMPLATE_ID"
+    ],
+    "extends": "AddressAddEditCustomControlBase"
+  },
+  {
+    "name": "GetExternalAddressCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [],
+    "extends": "AddressAddEditExtensionCommandBase"
+  },
+  {
+    "name": "CartViewController",
+    "methods": [],
+    "properties": [
+      "selectedCartLineId",
+      "_selectedCartLines",
+      "_selectedTenderLines",
+      "_isProcessingAddItemOrCustomer"
+    ],
+    "extends": "CartExtensionViewControllerBase"
+  },
+  {
+    "name": "CustomerDetailsCustomControl",
+    "methods": [
+      "onReady",
+      "init"
+    ],
+    "properties": [
+      "isCustomerSelected",
+      "accountHolder",
+      "accountNumber",
+      "phone",
+      "email",
+      "accountHolderLabel",
+      "accountNumberLabel",
+      "phoneLabel",
+      "emailLabel",
+      "TEMPLATE_ID",
+      "_customer"
+    ],
+    "extends": "CartViewCustomControlBase"
+  },
+  {
+    "name": "LineDetailsCustomControl",
+    "methods": [
+      "onReady",
+      "init"
+    ],
+    "properties": [
+      "cartLineItemId",
+      "cartLineDescription",
+      "isCartLineSelected",
+      "TEMPLATE_ID",
+      "_cartLine",
+      "_state"
+    ],
+    "extends": "CartViewCustomControlBase"
+  },
+  {
+    "name": "TipsCustomField",
+    "methods": [
+      "computeValue"
+    ],
+    "properties": [],
+    "extends": "CartViewTotalsPanelCustomFieldBase"
+  },
+  {
+    "name": "CustomFieldsSection",
+    "methods": [
+      "onReady",
+      "init",
+      "toggleVip",
+      "_addOrUpdateExtensionProperty"
+    ],
+    "properties": [
+      "ssn",
+      "organizationId",
+      "isVip",
+      "customerIsPerson",
+      "toggleSwitch",
+      "TEMPLATE_ID"
+    ],
+    "extends": "CustomerAddEditCustomControlBase"
+  },
+  {
+    "name": "GetExternalCustomerCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [],
+    "extends": "CustomerAddEditExtensionCommandBase"
+  },
+  {
+    "name": "CustomerCrossLoyaltyCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_customer",
+      "_loyaltyCards"
+    ],
+    "extends": "CustomerDetailsExtensionCommandBase"
+  },
+  {
+    "name": "CustomerDetailsFriendsPanel",
+    "methods": [
+      "onReady",
+      "init",
+      "_viewFriendDetails"
+    ],
+    "properties": [
+      "dataList",
+      "title",
+      "TEMPLATE_ID",
+      "_state",
+      "_friends"
+    ],
+    "extends": "CustomerDetailsCustomControlBase"
+  },
+  {
+    "name": "DisplayCustomerSummaryCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_customer",
+      "_affiliations",
+      "_wishLists",
+      "_loyaltyCards"
+    ],
+    "extends": "CustomerDetailsExtensionCommandBase"
+  },
+  {
+    "name": "DeliveryModeSortColumn",
+    "methods": [
+      "label",
+      "columnName"
+    ],
+    "properties": [
+      "_columnLabel",
+      "_columnName"
+    ],
+    "extends": "CustomSortColumnDefinitionBase"
+  },
+  {
+    "name": "FulfillmentLineCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_fulfillmentLines",
+      "_fulfillmentDeliveryType"
+    ],
+    "extends": "FulfillmentLineExtensionCommandBase"
+  },
+  {
+    "name": "CustomHealthCheck",
+    "methods": [
+      "executeHealthCheckAsync",
+      "getLastStatus"
+    ],
+    "properties": [
+      "_lastStatus"
+    ],
+    "extends": "CustomHealthCheckBase"
+  },
+  {
+    "name": "DownloadDocCommand",
+    "methods": [
+      "init",
+      "execute",
+      "_productChanged"
+    ],
+    "properties": [
+      "_locationAvailability",
+      "_locationAvailabilities"
+    ],
+    "extends": "InventoryLookupExtensionCommandBase"
+  },
+  {
+    "name": "MoreDetailsMenuCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "label",
+      "id",
+      "_selectedAvailability",
+      "_store"
+    ],
+    "extends": "InventoryLookupMatrixExtensionMenuCommandBase"
+  },
+  {
+    "name": "ManageShiftsCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_nonClosedShifts",
+      "_selectedShift"
+    ],
+    "extends": "ManageShiftsExtensionCommandBase"
+  },
+  {
+    "name": "PaymentViewCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_paymentCard",
+      "_tenderType",
+      "_fullAmount",
+      "_currency",
+      "_paymentAmount"
+    ],
+    "extends": "PaymentViewExtensionCommandBase"
+  },
+  {
+    "name": "PickingAndReceivingDetailsViewCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_selectedJournalLine",
+      "_journalLines",
+      "_journal",
+      "_receipt"
+    ],
+    "extends": "PickingAndReceivingDetailsExtensionCommandBase"
+  },
+  {
+    "name": "PriceCheckCustomControlPanel",
+    "methods": [
+      "onReady",
+      "init",
+      "priceCheckCompleted",
+      "customerChanged",
+      "_setCustomer",
+      "_updateMonthlyProductPrice",
+      "_getMonthlyPrice"
+    ],
+    "properties": [
+      "title",
+      "customerName",
+      "dataList",
+      "TEMPLATE_ID",
+      "_monthlyProductPrices"
+    ],
+    "extends": "PriceCheckCustomControlBase"
+  },
+  {
+    "name": "ReportDetailsCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_reportData",
+      "_reportTitle",
+      "_reportId"
+    ],
+    "extends": "ReportDetailsExtensionCommandBase"
+  },
+  {
+    "name": "ReturnTransactionCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_salesLines",
+      "_receiptNumber",
+      "_salesOrder"
+    ],
+    "extends": "ReturnTransactionExtensionCommandBase"
+  },
+  {
+    "name": "NavigateToSimpleExtensionViewCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [],
+    "extends": "ProductSearchExtensionCommandBase"
+  },
+  {
+    "name": "QuickCompareProductsCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_productSearchResults"
+    ],
+    "extends": "ProductSearchExtensionCommandBase"
+  },
+  {
+    "name": "ViewCustomerSummaryCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_customerSearchResults"
+    ],
+    "extends": "CustomerSearchExtensionCommandBase"
+  },
+  {
+    "name": "SampleOrderSearchTextFilter",
+    "methods": [],
+    "properties": [
+      "labelValue",
+      "id"
+    ],
+    "extends": "CustomTextSearchFilterDefinitionBase"
+  },
+  {
+    "name": "SampleSearchOrdersCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_salesOrdertmp"
+    ],
+    "extends": "SearchOrdersExtensionCommandBase"
+  },
+  {
+    "name": "SearchPickingAndReceivingViewCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_order"
+    ],
+    "extends": "SearchPickingAndReceivingExtensionCommandBase"
+  },
+  {
+    "name": "ShippingMethodsViewController",
+    "methods": [],
+    "properties": [],
+    "extends": "ShippingMethodsExtensionViewControllerBase"
+  },
+  {
+    "name": "DownloadDocumentCommand",
+    "methods": [
+      "init",
+      "execute",
+      "_journalChanged"
+    ],
+    "properties": [
+      "_selectedJournal",
+      "_products",
+      "_customer",
+      "_mode"
+    ],
+    "extends": "ShowJournalExtensionCommandBase"
+  },
+  {
+    "name": "SampleTransactionSearchTextFilter",
+    "methods": [],
+    "properties": [
+      "labelValue",
+      "id"
+    ],
+    "extends": "CustomTextSearchFilterDefinitionBase"
+  },
+  {
+    "name": "ProductAvailabilityPanel",
+    "methods": [
+      "onReady",
+      "init"
+    ],
+    "properties": [
+      "dataList",
+      "title",
+      "TEMPLATE_ID",
+      "_state",
+      "_orgUnitAvailabilities"
+    ],
+    "extends": "SimpleProductDetailsCustomControlBase"
+  },
+  {
+    "name": "StockCountDetailsCommand",
+    "methods": [
+      "init",
+      "execute"
+    ],
+    "properties": [
+      "_isNewJournal",
+      "_isAdvancedWarehousingEnabled",
+      "_journal",
+      "_journalLines",
+      "_selectedJournalLines"
+    ],
+    "extends": "StockCountDetailsExtensionCommandBase"
+  },
+  {
+    "name": "KnockoutExtensionViewControllerBase",
+    "methods": [
+      "onReady"
+    ],
+    "properties": [
+      "viewModel"
+    ],
+    "extends": "ExtensionViewControllerBase"
+  },
+  {
+    "name": "KnockoutExtensionViewModelBase",
+    "methods": [
+      "dispose"
+    ],
+    "properties": []
+  },
+  {
+    "name": "AddTenderLineToCartView",
+    "methods": [
+      "onAddTenderLineToCartClick",
+      "onReady",
+      "dispose"
+    ],
+    "properties": [
+      "lastStatus"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "AlphanumericInputDialogView",
+    "methods": [
+      "onReady",
+      "openAlphanumericInputDialog",
+      "dispose"
+    ],
+    "properties": [
+      "dialogResult"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "AlphanumericNumPadView",
+    "methods": [
+      "onReady",
+      "onNumPadEnter",
+      "dispose"
+    ],
+    "properties": [
+      "numPad",
+      "numPadValue"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "ApiView",
+    "methods": [
+      "onRefreshCart",
+      "onReady",
+      "onPriceOverride",
+      "onTransactionComment",
+      "onCartLineComment",
+      "dispose",
+      "getFirstCartLine",
+      "onRequestSuccess",
+      "onRequestFailed"
+    ],
+    "properties": [
+      "lastStatus",
+      "transactionComment",
+      "cartLineComment"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "AppBarView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "appBarCommandExecute"
+    ],
+    "properties": [],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "CloseShiftView",
+    "methods": [
+      "onReady",
+      "closeShiftAsync",
+      "dispose"
+    ],
+    "properties": [
+      "lastStatus"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "CurrencyNumPadView",
+    "methods": [
+      "onReady",
+      "onNumPadEnter",
+      "dispose"
+    ],
+    "properties": [
+      "numPad",
+      "numPadValue"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "DataListView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "selectRandomItem",
+      "selectItemsByName",
+      "_dataListSelectionChanged",
+      "_dataListItemInvoked"
+    ],
+    "properties": [
+      "dataList"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "DatePickerView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "_dateChangedHandler"
+    ],
+    "properties": [
+      "datePicker"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "DynamicDataListView",
+    "methods": [
+      "onReady",
+      "selectRandomItemsById",
+      "selectItemsByName",
+      "dispose",
+      "_dataListSelectionChanged",
+      "_loadDataPage",
+      "_getData",
+      "_getAlternativeData",
+      "_getAllItems"
+    ],
+    "properties": [
+      "paginatedDataList",
+      "_isUsingAlternativeData"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "ForceVoidTransactionView",
+    "methods": [
+      "onReady",
+      "getCurrentCart",
+      "forceVoidTransaction",
+      "dispose"
+    ],
+    "properties": [
+      "currentCart"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "HeaderSplitViewView",
+    "methods": [
+      "onReady",
+      "dispose"
+    ],
+    "properties": [],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "ListInputDialogView",
+    "methods": [
+      "onReady",
+      "openListInputDialog",
+      "dispose"
+    ],
+    "properties": [
+      "dialogResult"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "LoaderView",
+    "methods": [
+      "showLoaderClick",
+      "onReady",
+      "dispose"
+    ],
+    "properties": [],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "MenuView",
+    "methods": [
+      "onReady",
+      "showMenu",
+      "dispose",
+      "menuCommandClick"
+    ],
+    "properties": [
+      "menu"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "NumericInputDialogView",
+    "methods": [
+      "onReady",
+      "openNumericInputDialog",
+      "dispose"
+    ],
+    "properties": [
+      "dialogResult"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "NumericNumPadView",
+    "methods": [
+      "onReady",
+      "onNumPadEnter",
+      "dispose"
+    ],
+    "properties": [
+      "numPad",
+      "numPadValue"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "PivotView",
+    "methods": [
+      "onReady",
+      "dispose"
+    ],
+    "properties": [
+      "pivot",
+      "pivotItem1",
+      "pivotItem2"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "PostLogOnView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "_confirmLogin"
+    ],
+    "properties": [
+      "_options"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "SyncStockCountJournalsView",
+    "methods": [
+      "onReady",
+      "syncAllStockCountJournalsAsync",
+      "dispose"
+    ],
+    "properties": [
+      "journals"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "TextDialogView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "openTextDialog"
+    ],
+    "properties": [
+      "dialogResult"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "TimePickerView",
+    "methods": [
+      "onReady",
+      "timePickerChanged",
+      "dispose"
+    ],
+    "properties": [
+      "timePicker"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "ToggleMenuView",
+    "methods": [
+      "onReady",
+      "showToggleMenu",
+      "dispose",
+      "menuCommandClick"
+    ],
+    "properties": [
+      "toggleMenu"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "ToggleSwitchView",
+    "methods": [
+      "onReady",
+      "dispose",
+      "toggleSwitchChanged"
+    ],
+    "properties": [
+      "toggleSwitch"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "TransactionNumPadView",
+    "methods": [
+      "onReady",
+      "onNumPadEnter"
+    ],
+    "properties": [
+      "headerSplitView",
+      "numPad",
+      "numPadValue",
+      "numPadQuantity",
+      "scanResult"
+    ],
+    "extends": "ExtensionViewControllerBase"
+  },
+  {
+    "name": "VoidCartLineView",
+    "methods": [
+      "onReady",
+      "getCurrentCart",
+      "voidCartLine",
+      "dispose"
+    ],
+    "properties": [
+      "currentCart",
+      "cartLineId"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "VoidTenderLineView",
+    "methods": [
+      "onReady",
+      "getCurrentCart",
+      "voidTenderLine",
+      "dispose"
+    ],
+    "properties": [
+      "currentCart",
+      "tenderLineId"
+    ],
+    "extends": "CustomViewControllerBase"
+  },
+  {
+    "name": "DeliveryCustomGridColumn1",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomDeliveryGridColumnBase"
+  },
+  {
+    "name": "LinesCustomGridColumn1",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridColumnBase"
+  },
+  {
+    "name": "LinesCustomGridColumn2",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridColumnBase"
+  },
+  {
+    "name": "LinesCustomGridColumn3",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridColumnBase"
+  },
+  {
+    "name": "LinesCustomGridColumn4",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridColumnBase"
+  },
+  {
+    "name": "LinesCustomGridColumn5",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridColumnBase"
+  },
+  {
+    "name": "FraudCheckReminderItemSubfield",
+    "methods": [
+      "computeValue"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridItemSubfieldBase"
+  },
+  {
+    "name": "SubscribeAndSaveItemSubfield",
+    "methods": [
+      "computeValue",
+      "_isSubscribeAndSaveCartLine"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridItemSubfieldBase"
+  },
+  {
+    "name": "PaymentsCustomGridColumn1",
+    "methods": [
+      "title",
+      "computeValue",
+      "alignment"
+    ],
+    "properties": [],
+    "extends": "CustomPaymentsGridColumnBase"
+  },
+  {
+    "name": "FraudCheckReminderItemSubfield",
+    "methods": [
+      "computeValue"
+    ],
+    "properties": [],
+    "extends": "CustomSalesOrderLinesGridItemSubfieldBase"
+  },
+  {
+    "name": "FraudCheckReminderItemSubfield",
+    "methods": [
+      "computeValue"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridItemSubfieldBase"
+  },
+  {
+    "name": "SubscribeAndSaveItemSubfield",
+    "methods": [
+      "computeValue",
+      "_isSubscribeAndSaveCartLine"
+    ],
+    "properties": [],
+    "extends": "CustomLinesGridItemSubfieldBase"
+  }
+]

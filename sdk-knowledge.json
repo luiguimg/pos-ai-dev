@@ -1,0 +1,1563 @@
+{
+  "modules": [
+    "\"PosApi/Entities\"",
+    "\"PosApi/TypeExtensions\"",
+    "\"PosApi/Consume/Authentication\"",
+    "\"PosApi/Consume/Cart\"",
+    "\"PosApi/Consume/Categories\"",
+    "\"PosApi/Consume/Controls\"",
+    "\"PosApi/Consume/Customer\"",
+    "\"PosApi/Consume/DataService\"",
+    "\"PosApi/Consume/Device\"",
+    "\"PosApi/Consume/Diagnostics\"",
+    "\"PosApi/Consume/Dialogs\"",
+    "\"PosApi/Consume/Employees\"",
+    "\"PosApi/Consume/FiscalIntegration\"",
+    "\"PosApi/Consume/Formatters\"",
+    "\"PosApi/Consume/OrgUnits\"",
+    "\"PosApi/Consume/Payments\"",
+    "\"PosApi/Consume/Peripherals\"",
+    "\"PosApi/Consume/Products\"",
+    "\"PosApi/Consume/SalesOrders\"",
+    "\"PosApi/Consume/ScanResults\"",
+    "\"PosApi/Consume/Shifts\"",
+    "\"PosApi/Consume/StockCountJournals\"",
+    "\"PosApi/Consume/StoreOperations\"",
+    "\"PosApi/Framework/Runtime\"",
+    "\"PosApi/Framework/Logging\"",
+    "\"PosApi/Framework/Navigation\"",
+    "\"PosApi/Framework/ControlFactory\"",
+    "\"PosApi/Framework/ExtensionContext\"",
+    "\"PosApi/Create/Controls\"",
+    "\"PosApi/Create/Dialogs\"",
+    "\"PosApi/Create/RequestHandlers\"",
+    "\"PosApi/Create/Operations\"",
+    "\"PosApi/Framework/Messaging\"",
+    "\"PosApi/Create/Views\"",
+    "\"PosApi/Extend/Views/CustomControls\"",
+    "\"PosApi/Extend/DualDisplay\"",
+    "\"PosApi/Extend/Header\"",
+    "\"PosApi/Extend/RequestHandlers/RequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/CartRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/FiscalIntegrationRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/PaymentRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/PeripheralsRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/ProductsRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/SalesOrdersRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/ScanResultsRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/StoreFulfillmentRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/StoreOperationsRequestHandlers\"",
+    "\"PosApi/Extend/RequestHandlers/TenderCountingRequestHandlers\"",
+    "\"PosApi/Extend/Triggers/Triggers\"",
+    "\"PosApi/Extend/Triggers/ApplicationTriggers\"",
+    "\"PosApi/Extend/Triggers/AuditEventTriggers\"",
+    "\"PosApi/Extend/Triggers/CashManagementTriggers\"",
+    "\"PosApi/Extend/Triggers/CustomerTriggers\"",
+    "\"PosApi/Extend/Triggers/DiscountTriggers\"",
+    "\"PosApi/Extend/Triggers/InventoryTriggers\"",
+    "\"PosApi/Extend/Triggers/OperationTriggers\"",
+    "\"PosApi/Extend/Triggers/PaymentTriggers\"",
+    "\"PosApi/Extend/Triggers/PeripheralTriggers\"",
+    "\"PosApi/Extend/Triggers/PrintingTriggers\"",
+    "\"PosApi/Extend/Triggers/ProductTriggers\"",
+    "\"PosApi/Extend/Triggers/ReasonCodeTriggers\"",
+    "\"PosApi/Extend/Triggers/SalesOrderTriggers\"",
+    "\"PosApi/Extend/Triggers/ShiftTriggers\"",
+    "\"PosApi/Extend/Triggers/StockCountTriggers\"",
+    "\"PosApi/Extend/Triggers/TaxOverrideTriggers\"",
+    "\"PosApi/Extend/Triggers/TransactionTriggers\"",
+    "\"PosApi/Extend/Triggers/TransferOrderTriggers\"",
+    "\"PosApi/Extend/Views/AppBarCommands\"",
+    "\"PosApi/Extend/Views/AddressAddEditView\"",
+    "\"PosApi/Extend/Views/CustomListColumns\"",
+    "\"PosApi/Extend/Views/AffiliationsView\"",
+    "\"PosApi/Extend/Views/AllDiscountsView\"",
+    "\"PosApi/Extend/Views/ViewControllers\"",
+    "\"PosApi/Extend/Views/CustomGridColumns\"",
+    "\"PosApi/Extend/Views/CustomGridItemSubfield\"",
+    "\"PosApi/Extend/Views/CartView\"",
+    "\"PosApi/Extend/Views/CustomSearchFilters\"",
+    "\"PosApi/Extend/Views/CustomSortColumnDefinitions\"",
+    "\"PosApi/Extend/Views/CustomerAddEditView\"",
+    "\"PosApi/Extend/Views/CustomerDetailsView\"",
+    "\"PosApi/Extend/Views/CustomerOrderInvoicesView\"",
+    "\"PosApi/Extend/Views/FulfillmentLineView\"",
+    "\"PosApi/Extend/Views/HealthCheckView\"",
+    "\"PosApi/Extend/Views/InventoryAdjustmentDocumentWorkingView\"",
+    "\"PosApi/Extend/Views/InventoryDocumentListView\"",
+    "\"PosApi/Extend/Views/InventoryDocumentShippingAndReceivingView\"",
+    "\"PosApi/Extend/Views/MenuCommands\"",
+    "\"PosApi/Extend/Views/InventoryLookupMatrixView\"",
+    "\"PosApi/Extend/Views/InventoryLookupView\"",
+    "\"PosApi/Extend/Views/ManageChargesView\"",
+    "\"PosApi/Extend/Views/ManageShiftsView\"",
+    "\"PosApi/Extend/Views/PaymentView\"",
+    "\"PosApi/Extend/Views/PickingAndReceivingDetailsView\"",
+    "\"PosApi/Extend/Views/PriceCheckView\"",
+    "\"PosApi/Extend/Views/RecentPurchasesView\"",
+    "\"PosApi/Extend/Views/ReportDetailsView\"",
+    "\"PosApi/Extend/Views/ResumeCartView\"",
+    "\"PosApi/Extend/Views/ReturnTransactionView\"",
+    "\"PosApi/Extend/Views/SalesInvoiceDetailsView\"",
+    "\"PosApi/Extend/Views/SalesInvoicesView\"",
+    "\"PosApi/Extend/Views/SearchOrdersView\"",
+    "\"PosApi/Extend/Views/SearchPickingAndReceivingView\"",
+    "\"PosApi/Extend/Views/SearchStockCountView\"",
+    "\"PosApi/Extend/Views/SearchView\"",
+    "\"PosApi/Extend/Views/SettingsView\"",
+    "\"PosApi/Extend/Views/ShippingMethodsView\"",
+    "\"PosApi/Extend/Views/ShowJournalView\"",
+    "\"PosApi/Extend/Views/SimpleProductDetailsView\"",
+    "\"PosApi/Extend/Views/StockCountDetailsView\"",
+    "\"PosApi/Extend/Views/TransferOrderDetailsView\"",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "Commerce",
+    "\"PosUISdk/Controls/PosControl\"",
+    "\"PosUISdk/Controls/AppBar\"",
+    "\"PosUISdk/Controls/DataList\"",
+    "\"PosUISdk/Controls/DatePicker\"",
+    "\"PosUISdk/Controls/HeaderSplitView\"",
+    "\"PosUISdk/Controls/Loader\"",
+    "\"PosUISdk/Controls/Menu\"",
+    "\"PosUISdk/Controls/NumPad\"",
+    "\"PosUISdk/Controls/Pivot\"",
+    "\"PosUISdk/Controls/TimePicker\"",
+    "\"PosUISdk/Controls/ToggleSwitch\""
+  ],
+  "classes": [
+    {
+      "name": "GetGiftCardByIdServiceRequest",
+      "module": "",
+      "extends": [
+        "extends Commerce.ServiceRequest<TResponse>"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetGiftCardByIdServiceResponse",
+      "module": "",
+      "extends": [
+        "extends Commerce.ServiceResponse"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetPaymentCardTypeByBinRangeClientRequest",
+      "module": "",
+      "extends": [
+        "extends Commerce.Request<TResponse>"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetPaymentCardTypeByBinRangeClientResponse",
+      "module": "",
+      "extends": [
+        "extends Commerce.ClientResponse<Commerce.Proxy.Entities.CardTypeInfo[]>"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetSignatureClientRequest",
+      "module": "",
+      "extends": [
+        "extends Commerce.ClientRequest<TResponse>"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    },
+    {
+      "name": "GetSignatureClientResponse",
+      "module": "",
+      "extends": [
+        "extends Commerce.ClientResponse<string>"
+      ],
+      "methods": [],
+      "properties": [],
+      "file": "sdk/POS/Contracts/payments.d.ts"
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "ODataRequest",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "requestUri",
+          "type": "string"
+        },
+        {
+          "name": "method",
+          "type": "string"
+        },
+        {
+          "name": "data",
+          "type": "any"
+        },
+        {
+          "name": "headers",
+          "type": "Object"
+        },
+        {
+          "name": "user",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "type": "string"
+        },
+        {
+          "name": "useCrossDomainCookies",
+          "type": "boolean"
+        },
+        {
+          "name": "timeoutMS",
+          "type": "number"
+        }
+      ],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "ODataMetadata",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "properties",
+          "type": "Object"
+        },
+        {
+          "name": "elements",
+          "type": "ODataMetadata[]"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        }
+      ],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "OData",
+      "module": "",
+      "methods": [
+        {
+          "name": "read",
+          "params": [
+            {
+              "name": "uri",
+              "type": "string"
+            },
+            {
+              "name": "success",
+              "type": "any"
+            },
+            {
+              "name": "error",
+              "type": "any"
+            },
+            {
+              "name": "handler",
+              "type": "any"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "request",
+          "params": [
+            {
+              "name": "request",
+              "type": "ODataRequest"
+            },
+            {
+              "name": "success",
+              "type": "any"
+            },
+            {
+              "name": "error",
+              "type": "any"
+            },
+            {
+              "name": "handler",
+              "type": "any"
+            }
+          ],
+          "returnType": "any"
+        }
+      ],
+      "properties": [
+        {
+          "name": "defaultHttpClient",
+          "type": "any"
+        },
+        {
+          "name": "defaultHandler",
+          "type": "any"
+        },
+        {
+          "name": "defaultMetadata",
+          "type": "any"
+        },
+        {
+          "name": "batchHandler",
+          "type": "any"
+        },
+        {
+          "name": "jsonHandler",
+          "type": "any"
+        },
+        {
+          "name": "metadataHandler",
+          "type": "any"
+        },
+        {
+          "name": "jsonLightReadStringPropertyValue",
+          "type": "any"
+        }
+      ],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSCacheOptions",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "source",
+          "type": "string"
+        },
+        {
+          "name": "cacheSize",
+          "type": "number"
+        },
+        {
+          "name": "pageSize",
+          "type": "number"
+        },
+        {
+          "name": "prefetchSize",
+          "type": "number"
+        },
+        {
+          "name": "idle",
+          "type": "number"
+        },
+        {
+          "name": "mechanism",
+          "type": "string"
+        },
+        {
+          "name": "metadata",
+          "type": "string"
+        }
+      ],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSCache",
+      "module": "",
+      "methods": [
+        {
+          "name": "readRange",
+          "params": [
+            {
+              "name": "startIndex",
+              "type": "number"
+            },
+            {
+              "name": "count",
+              "type": "number"
+            }
+          ],
+          "returnType": "DataJSDeferredResult"
+        },
+        {
+          "name": "count",
+          "params": [],
+          "returnType": "DataJSDeferredResult"
+        },
+        {
+          "name": "clear",
+          "params": [],
+          "returnType": "any"
+        }
+      ],
+      "properties": [],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSStore",
+      "module": "",
+      "methods": [
+        {
+          "name": "add",
+          "params": [
+            {
+              "name": "key",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "any"
+            },
+            {
+              "name": "successCallback",
+              "type": "(key: string, value: any) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "addOrUpdate",
+          "params": [
+            {
+              "name": "key",
+              "type": "any"
+            },
+            {
+              "name": "value",
+              "type": "any"
+            },
+            {
+              "name": "successCallback",
+              "type": "(key: string, value: any) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "contains",
+          "params": [
+            {
+              "name": "key",
+              "type": "any"
+            },
+            {
+              "name": "successCallback",
+              "type": "(result: boolean) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "getAllKeys",
+          "params": [
+            {
+              "name": "successCallback",
+              "type": "(array: any) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "read",
+          "params": [
+            {
+              "name": "key",
+              "type": "any"
+            },
+            {
+              "name": "successCallback",
+              "type": "(key: string, value: any) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "remove",
+          "params": [
+            {
+              "name": "key",
+              "type": "any"
+            },
+            {
+              "name": "successCallback",
+              "type": "(result: boolean) => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "clear",
+          "params": [
+            {
+              "name": "successCallback",
+              "type": "() => void"
+            },
+            {
+              "name": "errorCallback",
+              "type": "(error: any) => void"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "close",
+          "params": [],
+          "returnType": "any"
+        }
+      ],
+      "properties": [],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJSDeferredResult",
+      "module": "",
+      "methods": [
+        {
+          "name": "then",
+          "params": [
+            {
+              "name": "successCallback",
+              "type": "any"
+            },
+            {
+              "name": "errorCallback",
+              "type": "any"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "abort",
+          "params": [],
+          "returnType": "any"
+        }
+      ],
+      "properties": [],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "DataJS",
+      "module": "",
+      "methods": [
+        {
+          "name": "createDataCache",
+          "params": [
+            {
+              "name": "options",
+              "type": "DataJSCacheOptions"
+            }
+          ],
+          "returnType": "DataJSCache"
+        },
+        {
+          "name": "createStore",
+          "params": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "mechanism",
+              "type": "string"
+            }
+          ],
+          "returnType": "any"
+        }
+      ],
+      "properties": [],
+      "file": "sdk/POS/Contracts/DataJS.d.ts"
+    },
+    {
+      "name": "IDisposable",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "dispose",
+          "type": "() => void"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Computed",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "subscribe",
+          "type": "(callback: (newValue: T) => void, callerObject?: any) => IDisposable"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Observable",
+      "module": "",
+      "methods": [
+        {
+          "name": "extend",
+          "params": [
+            {
+              "name": "requestedExtenders",
+              "type": "ObservableExtender"
+            }
+          ],
+          "returnType": "Observable<T>"
+        }
+      ],
+      "properties": [
+        {
+          "name": "subscribe",
+          "type": "(callback: (newValue: T) => void , callerObject?: any) => IDisposable"
+        },
+        {
+          "name": "valueHasMutated",
+          "type": "() => void"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "ObservableArray",
+      "module": "",
+      "methods": [
+        {
+          "name": "splice",
+          "params": [
+            {
+              "name": "start",
+              "type": "number"
+            },
+            {
+              "name": "deleteCount",
+              "type": "number"
+            },
+            {
+              "name": "items",
+              "type": "T[]"
+            }
+          ],
+          "returnType": "T[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "push",
+          "type": "(value: T) => void"
+        },
+        {
+          "name": "pop",
+          "type": "(value: T) => void"
+        },
+        {
+          "name": "remove",
+          "type": "(value: T) => void"
+        },
+        {
+          "name": "removeAll",
+          "type": "() => void"
+        },
+        {
+          "name": "subscribe",
+          "type": "(callback: (newValue: T[]) => void , callerObject?: any) => IDisposable"
+        },
+        {
+          "name": "valueHasMutated",
+          "type": "() => void"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "ObservableExtender",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "notify",
+          "type": "string"
+        },
+        {
+          "name": "rateLimit",
+          "type": "number"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutUtils",
+      "module": "",
+      "methods": [],
+      "properties": [
+        {
+          "name": "unwrapObservable",
+          "type": "(any) => any"
+        },
+        {
+          "name": "triggerEvent",
+          "type": "(target: any, eventName: string) => void"
+        },
+        {
+          "name": "registerEventHandler",
+          "type": "(target: any, eventName: string, callback: any) => void"
+        },
+        {
+          "name": "domNodeDisposal",
+          "type": "any"
+        },
+        {
+          "name": "arrayForEach",
+          "type": "(collection: any[], callback: any) => void"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "Knockout",
+      "module": "",
+      "methods": [
+        {
+          "name": "observable",
+          "params": [
+            {
+              "name": "value",
+              "type": "T"
+            }
+          ],
+          "returnType": "Observable<T>"
+        },
+        {
+          "name": "observableArray",
+          "params": [
+            {
+              "name": "value",
+              "type": "T[]"
+            }
+          ],
+          "returnType": "ObservableArray<T>"
+        },
+        {
+          "name": "computed",
+          "params": [
+            {
+              "name": "func",
+              "type": "() => T"
+            },
+            {
+              "name": "callerObj",
+              "type": "any"
+            }
+          ],
+          "returnType": "Computed<T>"
+        },
+        {
+          "name": "dataFor",
+          "params": [
+            {
+              "name": "target",
+              "type": "Element"
+            }
+          ],
+          "returnType": "T"
+        }
+      ],
+      "properties": [
+        {
+          "name": "utils",
+          "type": "KnockoutUtils"
+        },
+        {
+          "name": "applyBindings",
+          "type": "(data: any, target?: Element) => void"
+        },
+        {
+          "name": "applyBindingsToDescendants",
+          "type": "(data: any, target?: Element) => void"
+        },
+        {
+          "name": "applyBindingsToNode",
+          "type": "(element: Element, data: any, viewModel?: any) => void"
+        },
+        {
+          "name": "bindingHandlers",
+          "type": "any"
+        },
+        {
+          "name": "isObservable",
+          "type": "(any) => boolean"
+        },
+        {
+          "name": "cleanNode",
+          "type": "(element: Node) => void"
+        },
+        {
+          "name": "removeNode",
+          "type": "(element: Node) => void"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutBindingContext",
+      "module": "",
+      "methods": [
+        {
+          "name": "extend",
+          "params": [
+            {
+              "name": "any",
+              "type": "any"
+            }
+          ],
+          "returnType": "any"
+        },
+        {
+          "name": "createChildContext",
+          "params": [
+            {
+              "name": "any",
+              "type": "any"
+            }
+          ],
+          "returnType": "any"
+        }
+      ],
+      "properties": [
+        {
+          "name": "$parent",
+          "type": "any"
+        },
+        {
+          "name": "$parents",
+          "type": "any[]"
+        },
+        {
+          "name": "$root",
+          "type": "any"
+        },
+        {
+          "name": "$data",
+          "type": "any"
+        },
+        {
+          "name": "$index",
+          "type": "number"
+        },
+        {
+          "name": "$parentContext",
+          "type": "KnockoutBindingContext"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    },
+    {
+      "name": "KnockoutBindingHandler",
+      "module": "",
+      "methods": [
+        {
+          "name": "init",
+          "params": [
+            {
+              "name": "element",
+              "type": "any"
+            },
+            {
+              "name": "valueAccessor",
+              "type": "() => any"
+            },
+            {
+              "name": "allBindingsAccessor",
+              "type": "() => any"
+            },
+            {
+              "name": "viewModel",
+              "type": "any"
+            },
+            {
+              "name": "bindingContext",
+              "type": "KnockoutBindingContext"
+            }
+          ],
+          "returnType": "void"
+        },
+        {
+          "name": "update",
+          "params": [
+            {
+              "name": "element",
+              "type": "any"
+            },
+            {
+              "name": "valueAccessor",
+              "type": "() => any"
+            },
+            {
+              "name": "allBindingsAccessor",
+              "type": "() => any"
+            },
+            {
+              "name": "viewModel",
+              "type": "any"
+            },
+            {
+              "name": "bindingContext",
+              "type": "KnockoutBindingContext"
+            }
+          ],
+          "returnType": "void"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "type": "any"
+        }
+      ],
+      "file": "sdk/POS/Contracts/KnockoutJS.d.ts"
+    }
+  ],
+  "enums": []
+}
