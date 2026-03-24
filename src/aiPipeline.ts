@@ -15,6 +15,8 @@ async function run(){
 
   console.log("Processing issue:",issue.title)
 
+  console.log("DEBUG ISSUE:", issue)
+
   const branch = createBranch(issue.number)
 
   generateExtension(issue.title)
