@@ -6,7 +6,7 @@ export default class AutoTrigger extends PreEndTransactionTrigger {
 
  execute(options: IPreEndTransactionTriggerOptions): Promise<void>{
 
-  console.log("Generated from GitHub Issue: Add validation before completing transaction")
+  console.log("Generated from GitHub Issue: undefined")
 
   return Promise.resolve()
 

@@ -13,9 +13,13 @@ async function run(){
 
  for(const issue of issues){
 
+
   console.log("Processing issue:",issue.title)
 
-  console.log("DEBUG ISSUE:", issue)
+  if (issue.pull_request) {
+    console.log("Skipping pull request:", issue.number)
+    continue
+  }
 
   const branch = createBranch(issue.number)
 
